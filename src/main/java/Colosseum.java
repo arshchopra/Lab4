@@ -90,7 +90,13 @@ public class Colosseum {
      * Implement this function.
      */
     public static void printWhoIsAhead() {
-        System.out.println("Implement me!");
+        if (firstPokemon.hitPoints > secondPokemon.hitPoints) {
+            System.out.println(firstPokemon + " is currently ahead.");
+        } else if (secondPokemon.hitPoints > firstPokemon.hitPoints) {
+            System.out.println(secondPokemon + " is currently ahead.");
+        } else {
+            System.out.println("It is currently a tie!");
+        }
     }
 
     /**
@@ -101,7 +107,11 @@ public class Colosseum {
      * Write this function.
      */
     public static void determineWinner() {
-        System.out.println("Implement me!");
+        if (firstPokemon.hitPoints <= 0) {
+            System.out.println(firstPokemon + " wins!");
+        } else if (secondPokemon.hitPoints <= 0) {
+            System.out.println(secondPokemon + " wins!");
+        }
     }
 
     /**
